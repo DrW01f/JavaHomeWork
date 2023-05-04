@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
-import javax.print.attribute.SetOfIntegerSyntax;
-
 public class Task1 {
+    // Вычислить n-ое треугольного число (сумма чисел от 1 до n)
     public static void main(String[] args){
-        // Вычислить n-ое треугольного число (сумма чисел от 1 до n)
+        calculations();
+    } 
+
+    public static void calculations(){
         System.out.println("Введите число: ");
         Scanner scanner = new Scanner(System.in);
         String number = scanner.nextLine();
@@ -14,5 +16,6 @@ public class Task1 {
         }
         
         System.out.println("Результат равен: " + result);
-    } 
+
+    }
 }
