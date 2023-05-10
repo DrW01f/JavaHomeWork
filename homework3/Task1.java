@@ -3,15 +3,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void main(String[] args) {    
-    //Пусть дан произвольный список целых чисел, удалить из него четные числа
-    List<Integer> list = createList();
-    evenCountDeleter(list);
+    // Пусть дан произвольный список целых чисел, удалить из него четные числа
+    public static void main(String[] args) {
+        List<Integer> list = createList();
+        evenCountDeleter(list);
 
     }
 
-
-    static List<Integer> createList(){
+    public static List<Integer> createList() {
         System.out.println("Введите размер списка: ");
         Scanner scanner = new Scanner(System.in);
         int size = Integer.parseInt(scanner.nextLine());
@@ -22,15 +21,15 @@ public class Task1 {
 
         List<Integer> list = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
-            list.add((int)(Math.random() * (max - min + 1) + min));
+            list.add((int) (Math.random() * (max - min + 1) + min));
         }
         System.out.println(list);
         return list;
     }
 
-    public static void evenCountDeleter(List<Integer> list){
+    public static void evenCountDeleter(List<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) % 2 == 0){
+            if (list.get(i) % 2 == 0) {
                 list.remove(i);
                 i--;
             }
