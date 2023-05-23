@@ -14,8 +14,7 @@ public class Task3 {
         Integer sum = 0;
         ListIterator<Integer> iterator = list.listIterator(list.size());
             while (iterator.hasNext()){
-                sum += iterator.next() ;
-                System.out.println(iterator.next());                        
+                sum += iterator.next();                       
             }
         System.out.println(sum/list.size()); 
     }
