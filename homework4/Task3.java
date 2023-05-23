@@ -11,11 +11,13 @@ public class Task3 {
         }
         System.out.println(list);
         
-        Integer sum = 0;
+        Double sum = 0d;
         ListIterator<Integer> iterator = list.listIterator(list.size());
-            while (iterator.hasNext()){
-                sum += iterator.next();                       
-            }
+        while (iterator.hasNext()){
+            Integer elem=iterator.next();
+            sum += elem;
+            System.out.println(elem);                       
+        }
         System.out.println(sum/list.size()); 
     }
 
