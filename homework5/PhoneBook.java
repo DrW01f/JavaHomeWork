@@ -43,4 +43,7 @@ public class PhoneBook {
         return "";
     }
 
+    public String getAllList(){
+        return book.toString();
+    }
 }
