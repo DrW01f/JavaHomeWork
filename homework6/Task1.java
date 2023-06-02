@@ -43,7 +43,7 @@ public class Task1 {
     }
 
     // Map<String, String> filters = new HashMap<>();
-    var filters = "";
+    // var filters = "";
 
     Scanner scanner = new Scanner(System.in);
     boolean key = true;
@@ -51,11 +51,11 @@ public class Task1 {
     while (key){
         findMenu();
         int filter = scanner.nextInt();
-        String choice = ""; // выбор условия
+        // String choice = ""; // выбор условия
         
         switch (filter){
             case 1 -> {
-                choice = "coast";
+                // choice = "coast";
                 System.out.println("Введите стоимость");
                 String coast = scanner.next();
                 // filters.put(choice, coast);
@@ -67,7 +67,7 @@ public class Task1 {
                 } 
             }               
             case 2 -> {
-                choice = "ramCount";
+                // choice = "ramCount";
                 System.out.println("Введите объем оперативной памяти");
                 String ramCount = scanner.next();
                 // filters.put(choice, ramCount);
@@ -79,7 +79,7 @@ public class Task1 {
                 }
             }
             case 3 -> {
-                choice = "hardDriveCount";
+                // choice = "hardDriveCount";
                 System.out.println("Введите объем жеского диска");
                 String hardDriveCount = scanner.next();
                 // filters.put(choice, hardDriveCount);
@@ -91,31 +91,31 @@ public class Task1 {
                 }
             }
             case 4 -> {
-                choice = "operationSystem";
+                // choice = "operationSystem";
                 System.out.println("Введите операционную систему");
                 String operationSystem = scanner.next();
                 // filters.put(choice, operationSystem);
                 // filters = operationSystem;
                 for(Notebook note: notebookss){
-                    if (note.getoperationSystem() == operationSystem){
+                    if (note.getoperationSystem().equals(operationSystem)){
                         System.out.println(note);
                     }                
                 }
             }
             case 5 -> {
-                choice = "color";
+                // choice = "color";
                 System.out.println("Введите цвет");
                 String color = scanner.next();
                 // filters.put(choice, color);
                 // filters = color;
                 for(Notebook note: notebookss){
-                    if (note.getcolor() == color){
+                    if (note.getcolor().equals(color)){
                         System.out.println(note);
                     }                
                 }
             }
             case 6 -> {
-                choice = "videoCardCapacity";
+                // choice = "videoCardCapacity";
                 System.out.println("Введите объем видеокарты");
                 String videoCardCapacity = scanner.next();
                 // filters.put(choice, videoCardCapacity);
