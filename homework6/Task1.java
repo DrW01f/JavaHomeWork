@@ -37,9 +37,13 @@ public class Task1 {
     notebookss.add(note6);
     notebookss.add(note7);
     notebookss.add(note8);
+   
+    for (Notebook note: notebookss){
+        System.out.println(note);
+    }
 
-    Map<String, String> filters = new HashMap<>();
-
+    // Map<String, String> filters = new HashMap<>();
+    var filters = "";
 
     Scanner scanner = new Scanner(System.in);
     boolean key = true;
@@ -47,69 +51,90 @@ public class Task1 {
     while (key){
         findMenu();
         int filter = scanner.nextInt();
-        String choice = "";
+        String choice = ""; // выбор условия
         
         switch (filter){
             case 1 -> {
                 choice = "coast";
                 System.out.println("Введите стоимость");
                 String coast = scanner.next();
-                filters.put(choice, coast);
-            }
+                // filters.put(choice, coast);
+                // filters = coast;
+                for(Notebook note: notebookss){
+                    if (note.getcoast() == Integer.parseInt(coast)){
+                        System.out.println(note);
+                    }                
+                } 
+            }               
             case 2 -> {
                 choice = "ramCount";
                 System.out.println("Введите объем оперативной памяти");
                 String ramCount = scanner.next();
-                filters.put(choice, ramCount);
+                // filters.put(choice, ramCount);
+                // filters = ramCount;
+                for(Notebook note: notebookss){
+                    if (note.getramCount() == Integer.parseInt(ramCount)){
+                        System.out.println(note);
+                    }                
+                }
             }
             case 3 -> {
                 choice = "hardDriveCount";
                 System.out.println("Введите объем жеского диска");
                 String hardDriveCount = scanner.next();
-                filters.put(choice, hardDriveCount);
+                // filters.put(choice, hardDriveCount);
+                // filters = hardDriveCount;
+                for(Notebook note: notebookss){
+                    if (note.gethardDriveCount() == Integer.parseInt(hardDriveCount)){
+                        System.out.println(note);
+                    }                
+                }
             }
             case 4 -> {
                 choice = "operationSystem";
                 System.out.println("Введите операционную систему");
                 String operationSystem = scanner.next();
-                filters.put(choice, operationSystem);
+                // filters.put(choice, operationSystem);
+                // filters = operationSystem;
+                for(Notebook note: notebookss){
+                    if (note.getoperationSystem() == operationSystem){
+                        System.out.println(note);
+                    }                
+                }
             }
             case 5 -> {
                 choice = "color";
                 System.out.println("Введите цвет");
                 String color = scanner.next();
-                filters.put(choice, color);
+                // filters.put(choice, color);
+                // filters = color;
+                for(Notebook note: notebookss){
+                    if (note.getcolor() == color){
+                        System.out.println(note);
+                    }                
+                }
             }
             case 6 -> {
                 choice = "videoCardCapacity";
                 System.out.println("Введите объем видеокарты");
                 String videoCardCapacity = scanner.next();
-                filters.put(choice, videoCardCapacity);
+                // filters.put(choice, videoCardCapacity);
+                // filters = videoCardCapacity;
+                for(Notebook note: notebookss){
+                    if (note.getvideoCardCapacity() == Integer.parseInt(videoCardCapacity)){
+                        System.out.println(note);
+                    }                
+                }
             }
             default -> {
                 key = false;
             }
-        }
-        
-        for(Notebook note: notebookss){
-            if (note.getcoast() == Integer.parseInt(filters.get("coast"))){
-                System.out.println(note);
-            }
+        }     
 
         }                  
     }
-}
 
-    
-
-       
-
-
-      
-    
-
-   
-
+  
     
     public static void findMenu(){
         System.out.println("Выберите условия для фильтра: \n");

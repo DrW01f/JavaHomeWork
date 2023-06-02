@@ -77,7 +77,8 @@ public class Notebook {
 
     @Override
     public int hashCode() {
-        return Objects.hash(coast, ramCount, hardDriveCount, operationSystem, color, videoCardCapacity);
+        // return Objects.hash(coast, ramCount, hardDriveCount, operationSystem, color, videoCardCapacity);
+        return coast + ramCount + hardDriveCount+ operationSystem.hashCode() + color.hashCode() + videoCardCapacity;
     }
 
 
