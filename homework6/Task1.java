@@ -38,11 +38,24 @@ public class Task1 {
     notebookss.add(note7);
     notebookss.add(note8);
 
+
+    Map<String, String> filters = new HashMap<>();
+
     Scanner scanner = new Scanner(System.in);
     
     while (true){
         findMenu();
-        int filterNumber = scanner.nextInt();
+        int filter = scanner.nextInt();
+        String choice = "";
+        switch (filter){
+            case 1 -> {
+                choice = "coast";
+                System.out.println("Введите стоимость");
+                String coast = scanner.next();
+
+
+            }
+        }
 
     }
 
@@ -59,6 +72,12 @@ public class Task1 {
         System.out.println("5   Цвет");
         System.out.println("6   Объем видеокарты");
         System.out.println("0   Выход");
+    }
+
+    public static void ShowNotebooks(List<Notebook> notebooks) {
+        for (Notebook notebook : notebooks){
+            System.out.println(notebook);
+        }
     }
 
 
