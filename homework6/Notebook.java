@@ -58,9 +58,10 @@ public class Notebook {
     }
             
     public String toString() {
-        String result = String.format("coast: %s; ramCount: %s; hardDriveCount: %s; operationSystem: %s; color: %s; " +
-                "videoCardCapacity: %s.", coast, ramCount, hardDriveCount, operationSystem, color, videoCardCapacity);
-        return result;
+        // String result = String.format("coast: %d; ramCount: %d; hardDriveCount: %d; operationSystem: %s; color: %s; " +
+        //         "videoCardCapacity: %d.", coast, ramCount, hardDriveCount, operationSystem, color, videoCardCapacity);
+        return "Coast: " + coast + " RAM: " + ramCount + " Hard: " + hardDriveCount + " System: " + operationSystem + " Color: " + color + " Video: " + videoCardCapacity;
+                
     }
    
     @Override
@@ -77,7 +78,6 @@ public class Notebook {
 
     @Override
     public int hashCode() {
-        // return Objects.hash(coast, ramCount, hardDriveCount, operationSystem, color, videoCardCapacity);
         return coast + ramCount + hardDriveCount+ operationSystem.hashCode() + color.hashCode() + videoCardCapacity;
     }
 
