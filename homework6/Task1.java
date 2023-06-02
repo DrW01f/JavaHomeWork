@@ -39,8 +39,7 @@ public class Task1 {
     notebookss.add(note8);
 
     Map<String, String> filters = new HashMap<>();
-    ArrayList temp = new ArrayList<>();
-    List notBookList = List.copyOf(temp);
+
 
     Scanner scanner = new Scanner(System.in);
     boolean key = true;
@@ -91,15 +90,28 @@ public class Task1 {
                 key = false;
             }
         }
+        
+        for(Notebook note: notebookss){
+            if (note.getcoast() == Integer.parseInt(filters.get("coast"))){
+                System.out.println(note);
+            }
+
+        }                  
+    }
+}
+
+    
+
+       
+
 
       
-    }
+    
 
+   
 
-    }
     
     public static void findMenu(){
-
         System.out.println("Выберите условия для фильтра: \n");
         System.out.println("1   Стоимость");
         System.out.println("2   Объем оперативной памяти");
@@ -107,9 +119,10 @@ public class Task1 {
         System.out.println("4   Операционная система");
         System.out.println("5   Цвет");
         System.out.println("6   Объем видеокарты");
-        System.out.println("0   Выход");
+        System.out.println("0   Выход");    
     }
- 
 }
-    
+ 
 
+    
+        
