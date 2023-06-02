@@ -38,25 +38,61 @@ public class Task1 {
     notebookss.add(note7);
     notebookss.add(note8);
 
-
     Map<String, String> filters = new HashMap<>();
+    ArrayList temp = new ArrayList<>();
+    List notBookList = List.copyOf(temp);
 
     Scanner scanner = new Scanner(System.in);
-    
-    while (true){
+    boolean key = true;
+
+    while (key){
         findMenu();
         int filter = scanner.nextInt();
         String choice = "";
+        
         switch (filter){
             case 1 -> {
                 choice = "coast";
                 System.out.println("Введите стоимость");
                 String coast = scanner.next();
-
-
+                filters.put(choice, coast);
+            }
+            case 2 -> {
+                choice = "ramCount";
+                System.out.println("Введите объем оперативной памяти");
+                String ramCount = scanner.next();
+                filters.put(choice, ramCount);
+            }
+            case 3 -> {
+                choice = "hardDriveCount";
+                System.out.println("Введите объем жеского диска");
+                String hardDriveCount = scanner.next();
+                filters.put(choice, hardDriveCount);
+            }
+            case 4 -> {
+                choice = "operationSystem";
+                System.out.println("Введите операционную систему");
+                String operationSystem = scanner.next();
+                filters.put(choice, operationSystem);
+            }
+            case 5 -> {
+                choice = "color";
+                System.out.println("Введите цвет");
+                String color = scanner.next();
+                filters.put(choice, color);
+            }
+            case 6 -> {
+                choice = "videoCardCapacity";
+                System.out.println("Введите объем видеокарты");
+                String videoCardCapacity = scanner.next();
+                filters.put(choice, videoCardCapacity);
+            }
+            default -> {
+                key = false;
             }
         }
 
+      
     }
 
 
@@ -73,14 +109,7 @@ public class Task1 {
         System.out.println("6   Объем видеокарты");
         System.out.println("0   Выход");
     }
-
-    public static void ShowNotebooks(List<Notebook> notebooks) {
-        for (Notebook notebook : notebooks){
-            System.out.println(notebook);
-        }
-    }
-
-
+ 
 }
     
 
