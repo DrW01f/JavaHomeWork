@@ -42,9 +42,13 @@ public class Task1 {
             System.out.println(note);
         }
 
+        filter(notebookss);                 
+    }
+
+  
+    public static void filter(Set<Notebook> notebookss){
         Scanner scanner = new Scanner(System.in);
         boolean key = true;
-
         while (key){
             findMenu();
             int filter = scanner.nextInt();
@@ -109,10 +113,8 @@ public class Task1 {
                 }
             }     
 
-        }                  
+        }  
     }
-
-  
     
     public static void findMenu(){
         System.out.println("Выберите условия для фильтра: \n");
